@@ -9,30 +9,41 @@ namespace ConsoleApplication10
     {
         static void Main(string[] args)
         {
+
+
             int change;
-            int[] name = { 5, 14, 3, 2, 1 };
             int n = 5;
             int i, j;
-            for ( i = 0; i < n-1; i++)
+            Console.WriteLine("please enter number of index");
+            int numberindex = int.Parse(Console.ReadLine());
+            int[] name = new int[numberindex];
+            for (int o = 0; o < numberindex; o++)
             {
-                for (j = 0; j < n-i-1; j++)
+                name[o] = int.Parse(Console.ReadLine());
+            }
+
+
+            for (i = 0; i < n - 1; i++)
+            {
+                for (j = 0; j < n - i - 1; j++)
                 {
                     if (name[j] > name[j + 1])
                     {
                         change = name[j];
-                        name[j] = name[j +1];
+                        name[j] = name[j + 1];
                         name[j + 1] = change;
                     }
 
                 }
-               
+
             }
             Console.WriteLine(string.Join(", ", name));
 
         }
 
-            
 
-         
+
+
     }
 }
+
