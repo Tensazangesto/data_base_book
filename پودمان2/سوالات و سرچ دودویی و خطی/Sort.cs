@@ -22,9 +22,6 @@ namespace ConsoleApplication10
                 Console.WriteLine("enter the object: ");
                 name[o] = int.Parse(Console.ReadLine());
             }
-            Console.WriteLine("the arr without sort = " + string.Join(", ", name));
-
-
             for (i = 0; i < n - 1; i++)
             {
                 for (j = 0; j < n - i - 1; j++)
